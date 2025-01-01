@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-6">
+    1. Dữ liệu nội suy <br />
+    <p>FirstName: {{ firstName }}</p>
+    <p>{{ rollNo }}</p>
+  </div>
+  <div class="col-6">
+    2. Ràng buộc dữ liệu <br />
+    <input type="text" [value]="firstName" />
+    <br />
+    <input type="text" [placeholder]="placeholder" />
+    <br />
+    <div [class]="divClassName" style="height: 60px; width: 60px"></div>
+  </div>
+  <div class="row">
+    <p>3.Event Data</p>
+    <br />
+    <div class="col-3">
+      <button class="btn btn-success" (click)="showAlertSuccess()">
+        Show Alert Success
+      </button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-danger" (click)="showAlertDanger()">
+        Show Alert Danger
+      </button>
+    </div>
+    <div class="col-3">
+      <select (change)="onChangeCity()">
+        <option value="CanTho">CanTho</option>
+        <option value="HoChiMinh">HoChiMinh</option>
+        <option value="HaNoi">HaNoi</option>
+        <option value="HaiPhong">HaiPhong</option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <p>4.Two-way Binding</p>
+        <br />
+        <input type="text" [(ngModel)]="firstName" />
+      </div>
+      <div class="col-3">
+        <select [(ngModel)]="cityChange">
+          <option value="CanTho">CanTho</option>
+          <option value="HoChiMinh">HoChiMinh</option>
+          <option value="HaNoi">HaNoi</option>
+          <option value="HaiPhong">HaiPhong</option>
+        </select>
+        -{{ cityChange }}
+      </div>
+    </div>
+  </div>
+</div>
