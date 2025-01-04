@@ -1,0 +1,25 @@
+<h1>ngIf</h1>
+
+<hr />
+<div class="row">
+  <div class="col-3">
+    <div class="bg-success p-3" *ngIf="div1Visiable">Div 1</div>
+  </div>
+  <div class="col-3">
+    <div class="bg-primary p-3" *ngIf="number1 == number2">Div 2</div>
+  </div>
+</div>
+
+<div class="row pt-2">
+  <div class="col-3 text-center">
+    <div class="btn btn-danger" (click)="hide()">Hide</div>
+    <div class="btn btn-success mx-3" (click)="show()">Show</div>
+  </div>
+  <div class="col-3 text-center">
+    <input type="text" [(ngModel)]="number1" />
+    <input type="text" [(ngModel)]="number2" />
+  </div>
+</div>
+
+<br />
+<hr />

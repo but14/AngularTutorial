@@ -1,0 +1,41 @@
+<h1>ngFor</h1>
+<hr />
+<div class="row">
+  <div class="col-3">
+    <ul>
+      <li *ngFor="let city of cityList">{{ city }}</li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3" *ngFor="let citys of cityList">
+    <span>{{ citys }}</span>
+  </div>
+  <div class="col-3">
+    <select>
+      <option *ngFor="let std of studentList" [value]="std.name">
+        {{ std.name }}
+      </option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="col-5">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr  *ngFor="let std of studentList; let number = index" >
+                <th >{{number}}</th>
+                <th>{{std.name}}</th>
+                <th>{{std.age}}</th>
+                <th>{{std.city}}</th>
+            </tr>
+        </thead>
+    </table>
+  </div>
+</div>
