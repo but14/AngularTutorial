@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-3 p-3" [ngClass]="div1Background">Div 1</div>
+  <div
+    class="col-3 p-3"
+    [ngClass]="isChecked == true ? 'bg-success' : 'bg-danger'"
+  >
+    Div 2
+  </div>
+  <div class="col-3 p-3" [ngClass]="div3Background">Div 3</div>
+</div>
+
+<div class="row">
+  <div class="col-3 p-3">
+    <button (click)="changeBackground('bg-primary')">Add primary</button>
+    <button (click)="changeBackground('bg-success')">Add Success</button>
+    <button (click)="changeBackground('bg-danger')">Add Danger</button>
+  </div>
+  <div class="col-3 p-3">
+    <input type="checkbox" [(ngModel)]="isChecked" />
+  </div>
+  <div class="col-3 p-3">
+    <input type="text" [(ngModel)] = "div3Background">
+  </div>
+</div>
