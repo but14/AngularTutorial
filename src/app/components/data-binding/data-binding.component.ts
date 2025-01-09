@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-data-binding',
@@ -24,7 +25,7 @@ export class DataBindingComponent {
 
   cityChange: String = "";
 
-  constructor() {
+  constructor(private router: Router ) {
     console.log(this.firstName);
 
     this.isActive = true;
@@ -33,6 +34,10 @@ export class DataBindingComponent {
     console.log(this.currentDate);
 
     console.log(this.rollNo);
+  }
+
+  navigateAdmin(){
+    this.router.navigateByUrl("/admin");
   }
 
   showAlertSuccess() {
